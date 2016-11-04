@@ -89,7 +89,7 @@ public class Agenda {
         for (int i = 0; i < listName.length; i++) {
             if (name.equals(listName[i])) {
                 r = i;
-                System.out.println("Nume deja introdus!");
+                System.out.println("Name already exists!");
                 break;
             }
         }
