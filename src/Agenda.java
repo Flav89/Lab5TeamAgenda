@@ -33,9 +33,9 @@ public class Agenda {
 
                 case 0 :   System.out.println("Exit!");break; //Exit
 
-                default:   System.out.println("invalid option!");
+                default:  System.out.println("invalid option!");break;
             }
-        } while (option != 0);
+        } while (option !=0);
     }
 
 
@@ -51,7 +51,7 @@ public class Agenda {
     }
 
 
-    public static void list(String[] array) {
+    public static void list(String[] listName) {
 
         System.out.println("\nContacts list: ");
 
@@ -89,22 +89,23 @@ public class Agenda {
         for (int i = 0; i < listName.length; i++) {
             if (name.equals(listName[i])) {
                 r = i;
+                System.out.println("Nume deja introdus!");
                 break;
             }
         }
         return r;
+
     }
 
     public static void sterge(int index, String name) {
         listName[index] = null;
-        System.out.println("Contact " + name + " from index " + index + " has been deleted!");
+        System.out.println("Contact " + name + " from index " + index  + " " + " has been deleted!");
     }
 
 
     public static void modifica(int index, String oldContact, String newContact) {
         listName[index] = newContact;
-        System.out.println("Contact " + oldContact + " from index " + index +
-                "has been modified!");
+        System.out.println("Contact " + oldContact + " from index " + index + " " + "has been modified!");
     }
 
 
